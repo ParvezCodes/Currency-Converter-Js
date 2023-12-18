@@ -6,17 +6,21 @@ on:
       - master
 
 jobs:
-  bulid:
-    name: Production
+  deploy:
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+    defaults:
+      run:
+        working-directory: ./ # Set the working directory to the root of your repository
 
+    steps:
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: "16" # Specify the Node.js version here
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Install dependencies
         run: npm install
