@@ -3,7 +3,7 @@ const dropList = document.querySelectorAll("form select"),
   toCurrency = document.querySelector(".to select"),
   getButton = document.querySelector("form button");
 
-const API_KEY = process.env.API_KEY;
+  const API_KEY = 'YOUR_PLACEHOLDER';
 
 // Use apiKey in your API requests
 // Example: const response = await fetch(`https://api.example.com/convert?apiKey=${apiKey}&...`);
